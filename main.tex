@@ -60,6 +60,17 @@
 
 \usepackage{hyperref} % For hyperlinks in the PDF
 
+\usepackage{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+% \usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{siunitx}
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -68,11 +79,11 @@
 
 \pretitle{\begin{center}\Huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
-\title{Your fancy paperrrr title} % Article title
+\title{Extreme learning machines for brain computer interfacing} % Article title
 \author{%
-\textsc{John Smith} \\[1ex] % Your name
-\normalsize Your fancy institution \\ % Your institution
-\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+\textsc{Esmeralda Aguayo} \\[1ex] % Your name
+\normalsize KU Leuven \\ % Your institution
+% \normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
 %\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
 %\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
 %\normalsize University of Utah \\ % Second author's institution
@@ -97,16 +108,26 @@
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
-\paragraph{General}
-Mutliple disorders can disrupt the neuromuscular channels our brain uses for motor control of our bodies. Amyotrophic lateral sclerosis (ALS), cerebral palsy and muscular dystrophies are a few of such disorders that lead to severe motor impairment and communication disabilities [SOURCE]. Brain computer interfacing (BCIs) is a highly interdisciplinary field with the goal to build a direct external communication channel between the human brain and artifical devices. Great interest in  BCI technology was generated in 1999 when a study demonstrated direct control of a robotic arm via ensembles of cortical neurons \cite{Chapin:1999}. Since, proof of concept studies have shown BCI control over computer cursers, computer spelling systems, robotic arms and wheelchairs [SOURCES 3,31 IN CITATION 1]. Its potential to improve of the quality of life of neurologically impaired patients drives research in BCI techonology.
-%Patients suffering of ALS, cerebral palsy are amoungst %excitement in
+\subsection{General}
+\paragraph{}
+Mutliple disorders can disrupt the neuromuscular channels our brain uses for motor control of our bodies. Amyotrophic lateral sclerosis (ALS), cerebral palsy and muscular dystrophies are a few of such disorders that lead to severe motor impairment and communication disabilities \citep{wolpaw2002brain}.
+%HOW MANY PEOPLE ARE AFFECTED YEARLY?
+%Reword Impact
+
+\paragraph{}
+Brain computer interfacing (BCIs) is a highly interdisciplinary field with the aim to build a direct external communication channel between the human brain and artifical devices. Great interest in BCI technology was generated in 1999 when a study demonstrated direct control of a robotic arm via ensembles of cortical neurons \citep{chapin1999real}. Since, proof of concept studies have shown BCI control over computer cursers, computer spelling systems, robotic arms and wheelchairs [SOURCES 3,31 IN CITATION chapin1999real]. Its potential to improve of the quality of life of neurologically impaired patients drives research in BCI techonology.
 % Quality of life
 
-\paragraph{EEG}
+\subsection{EEG}
+\paragraph{}
 Amongst the types of BCIs in developement, electroencephalogy (EEG) is one of the most studied methods of electrophysiological recodings. It is non-invasive system that does not expose patients to the risks of brain surgery. HOW ITS downloaded
 EEG can detect modulations in brain activity that correlate
+IN EXPENSIVE EQUIPTMENT
+HAS A SHORT TIME CONSTANT FOR FAST COMMUNICATION \citep{wolpaw2002brain}
+%WHAT ABOUT RELIABILITY & INTENTION
 
-\paragraph{P300}
+\subsection{P300}
+\paragraph{}
 Event related response P300
 informs stimulus selection
 machine learning algorithms have been trained to recognized EEG P300 patterns [SOURCE 26 IN CITATION 1].
@@ -139,7 +160,7 @@ EEG
 Some random text \footnote{Example footnote}, and more random text:
 
 \begin{itemize}
-\item Item 1 \cite{Figueredo:2009dg}
+\item Item 1 %\cite{Figueredo:2009dg}
 \item Item 2
 \item Item 3
 \end{itemize}
@@ -150,20 +171,24 @@ Some random text \footnote{Example footnote}, and more random text:
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+% \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+%
+% \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+% Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+% \newblock Assortative pairing and life history strategy - a cross-cultural
+%   study.
+% \newblock {\em Human Nature}, 20:317--330.
+%
+% \bibitem[]{Chapin:1999}
+% Chapin, John K., et al. (1999).
+% \newblock Real-time control of a robot arm using simultaneously recorded neurons in the motor cortex.
+% \newblock {\em Nature neuroscience}, 2.7 : 664-670.
+%
+% \end{thebibliography}
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
-
-\bibitem[]{Chapin:1999}
-Chapin, John K., et al. (1999).
-\newblock Real-time control of a robot arm using simultaneously recorded neurons in the motor cortex.
-\newblock {\em Nature neuroscience}, 2.7 : 664-670.
-
-\end{thebibliography}
+\bibliography{main}
+% \bibliographystyle{ieeetr}
+\bibliographystyle{humannat}
 
 %----------------------------------------------------------------------------------------
 
